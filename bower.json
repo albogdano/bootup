@@ -1,0 +1,6 @@
+{
+  "name": "bootUP",
+  "dependencies": {
+    "h5bp": "h5bp/html5-boilerplate"
+  }
+}

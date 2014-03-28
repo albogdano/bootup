@@ -1,0 +1,12 @@
+{
+  "dest": "dist",
+  "assets": "<%= site.dest %>/assets",
+  "ga": "UA-XXXXX-X",
+  "domain": "domain.com",
+  "templates": "src",
+  "pages": "<%= site.templates %>/pages",
+  "partials": "<%= site.templates %>/partials",
+  "layouts": "<%= site.templates %>/layouts",
+  "layout": "default.hbs",
+  "data": "data/*.{json,yml}"
+}
