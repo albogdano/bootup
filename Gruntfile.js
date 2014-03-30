@@ -27,14 +27,14 @@ module.exports = function(grunt) {
 				flatten: true,
 				layouts: "<%= site.layouts %>",
 				layout: "<%= site.layout %>",
-				partials: ["<%= site.partials %>/*.hbs"],
+				partials: ["<%= site.partials %>/*.html"],
 				// Metadata
 				pkg: "<%= pkg %>",
 				site: "<%= site %>",
 				data: ["<%= site.data %>"]
 			},
 			htmls: {
-				files: {"<%= site.dest %>/": ["<%= site.templates %>/*.hbs"]}
+				files: {"<%= site.dest %>/": ["<%= site.templates %>/*.html"]}
 			},
 			phps: {
 				options: {
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
 		
 		watch: {
 			assemble: {
-				files: ["<%= site.templates %>/{,*/}*.{md,hbs,yml,css,html,js}"],
+				files: ["<%= site.templates %>/{,*/}*.{md,yml,css,html,js}"],
 				tasks: ["assemble"]
 			},
 			livereload: {

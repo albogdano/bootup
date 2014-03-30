@@ -6,6 +6,6 @@
   "pages": "<%= site.templates %>/pages",
   "partials": "<%= site.templates %>/partials",
   "layouts": "<%= site.templates %>/layouts",
-  "layout": "default.hbs",
+  "layout": "default.html",
   "data": "data/*.{json,yml}"
 }
