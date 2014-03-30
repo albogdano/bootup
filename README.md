@@ -3,8 +3,12 @@
 
 ## Features
 
-- [Assemble](http://assemble.io) - static site generator
+With **bootUP** you can quickly build responsive static websites and iterate on them _without refreshing the browser_! 
+It contains some of the most widely used frontend tools and frameworks.
+
 - [Bootstrap](http://getbootstrap.com) - CSS and JS framework
+- [Assemble](http://assemble.io) - static site generator
+- [HTML5 Boilerplate](http://html5boilerplate.com) - HTML5 barebones template
 - [Grunt](http://http://gruntjs.com) - Javascript build tool
 - [Bootswatch](http://bootswatch.com) - a collection of Bootstrap themes
 - [Font Awesome](http://fontawesome.io) - icon font
