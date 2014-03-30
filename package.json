@@ -1,5 +1,5 @@
 {
-	"name": "bootUP",
+	"name": "bootup",
 	"description": "Website template with integrated Bootstrap, Assemble, HTML5 boilerplate and Bootswatch Simplex.",
 	"version": "0.1.0",
 	"homepage": "https://github.com/albogdano/bootup",
@@ -41,9 +41,10 @@
 		"assemble boilerplate",
 		"boilerplate",
 		"h5bp",
-		"html 5 boilerplate",
+		"html5 boilerplate",
 		"bootstrap",
 		"bootstrap boilerplate",
-		"bootUP"
+		"bootup",
+		"bootswatch"
 	]
 }

@@ -1,6 +1,5 @@
 {
   "dest": "dist",
-  "assets": "<%= site.dest %>/assets",
   "ga": "UA-XXXXX-X",
   "domain": "domain.com",
   "templates": "src",

@@ -25,7 +25,6 @@ module.exports = function(grunt) {
 		assemble: {
 			options: {
 				flatten: true,
-				assets: "<%= site.assets %>",
 				layouts: "<%= site.layouts %>",
 				layout: "<%= site.layout %>",
 				partials: ["<%= site.partials %>/*.hbs"],
