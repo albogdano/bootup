@@ -8,6 +8,24 @@
 
 module.exports = function(grunt) {
 
+	var cssCopy = {
+		flatten: true, 
+		expand: true, 
+		cwd: "<%= site.templates %>/<%= site.template %>/css/", 
+		src: ["*.*"], 
+		dest: "<%= site.dest %>/css/"
+	};
+	
+	var jsCopy = {
+		flatten: true, 
+		expand: true, 
+		cwd: "<%= site.templates %>/<%= site.template %>/js/", 
+		src: ["*.*"], 
+		dest: "<%= site.dest %>/js/"
+	};
+	
+	var templateDir = "<%= site.templates %>/<%= site.template %>";
+	
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
@@ -27,21 +45,22 @@ module.exports = function(grunt) {
 				flatten: true,
 				layouts: "<%= site.layouts %>",
 				layout: "<%= site.layout %>",
-				partials: ["<%= site.partials %>/*.html"],
+				partials: ["<%= site.partials %>/*.html", templateDir + "/partials/*.html"],
+				template: "<%= site.template %>",
 				// Metadata
 				pkg: "<%= pkg %>",
 				site: "<%= site %>",
 				data: ["<%= site.data %>"]
 			},
 			htmls: {
-				files: {"<%= site.dest %>/": ["<%= site.templates %>/*.html"]}
+				files: {"<%= site.dest %>/": [templateDir + "/*.html"]}
 			},
-			phps: {
+			phps: ("<%= assemble.options.template %>" === "modern-business") ? {
 				options: {
 					ext: ".php"
 				},
-				files: {"<%= site.dest %>/": ["<%= site.templates %>/contact.php"]}
-			}
+				files: {"<%= site.dest %>/": [templateDir + "/contact.php"]}
+			} : {}
 		},
 		// Prettify test HTML pages from Assemble task.
 		prettify: {
@@ -60,9 +79,9 @@ module.exports = function(grunt) {
 			content: {
 				files: [
 //					{flatten: true, expand: true, cwd: "<%= vendor %>/h5bp/", src: ["doc/**"], dest: "tmp/content/"}
-					{flatten: true, expand: true, cwd: "<%= site.templates %>/css/", src: ["*.*"], dest: "<%= site.dest %>/css/"},
-					{flatten: true, expand: true, cwd: "<%= site.templates %>/js/", src: ["*.*"], dest: "<%= site.dest %>/js/"},
-					{flatten: true, expand: true, cwd: "<%= site.templates %>/", src: ["*.html", "*.php"], dest: "<%= site.dest %>/"}					
+					cssCopy, jsCopy,
+					{flatten: true, expand: true, cwd: templateDir + "/img/", src: ["*.*"], dest: "<%= site.dest %>/img/"},
+					{flatten: true, expand: true, cwd: templateDir + "/", src: ["*.html", "*.php"], dest: "<%= site.dest %>/"}					
 				]
 			},
 			essentials: {
@@ -73,7 +92,9 @@ module.exports = function(grunt) {
 					{expand: true, cwd: "<%= h5bp %>", src: ["favicon.ico"], dest: "<%= site.dest %>"},
 					{expand: true, cwd: "<%= h5bp %>", src: ["apple-touch*"], dest: "<%= site.dest %>"}
 				]
-			}
+			},
+			onlycss: { files: [cssCopy] },
+			onlyjs: { files: [jsCopy] }
 		},
 		// Before generating new files remove files from previous build.
 		clean: {
@@ -82,8 +103,22 @@ module.exports = function(grunt) {
 		
 		watch: {
 			assemble: {
-				files: ["<%= site.templates %>/{,*/}*.{md,yml,css,html,js}"],
+				files: [templateDir + "/{,*/}*.{md,yml,html}"],
 				tasks: ["assemble"]
+			},
+			css: {
+				files: templateDir + "/css/*.css",
+				tasks: ["copy:onlycss"],
+				options: {
+					livereload: true
+				}
+			},
+			js: {
+				files: templateDir + "/js/*.js",
+				tasks: ["copy:onlyjs"],
+				options: {
+					livereload: true
+				}
 			},
 			livereload: {
 				options: {
@@ -91,8 +126,6 @@ module.exports = function(grunt) {
 				},
 				files: [
 					"<%= site.dest %>/{,*/}*.html",
-					"<%= site.dest %>/{,*/}*.css",
-					"<%= site.dest %>/{,*/}*.js",
 					"<%= site.dest %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}"
 				]
 			}

@@ -7,5 +7,7 @@
   "partials": "<%= site.templates %>/partials",
   "layouts": "<%= site.templates %>/layouts",
   "layout": "default.html",
-  "data": "data/*.{json,yml}"
+  "data": "data/*.{json,yml}",
+  "template": "grayscale",
+	"theme": "flatly"
 }
