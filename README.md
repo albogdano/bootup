@@ -13,6 +13,14 @@ It contains some of the most widely used frontend tools and frameworks.
 - [Bootswatch](http://bootswatch.com) - a collection of Bootstrap themes
 - [Font Awesome](http://fontawesome.io) - icon font
 
+## Requirements
+
+Skip this part if you already have Node.js, Grunt and Bower on your machine.
+
+1. Get [Node.js](http://nodejs.org/)
+2. Install Grunt - `$ npm install -g grunt-cli` 
+3. Install Bower - `$ npm install -g bower`
+
 ## Getting Started
 
 1. [Download](https://github.com/albogdano/bootup/archive/master.zip) bootUP **or** clone it.
