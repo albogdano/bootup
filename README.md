@@ -15,6 +15,12 @@
 2. `$ npm install && bower install`
 3. `$ grunt server`
 
+## Settings
+
+### Google Analytics
+
+Edit `assemble.json` and change `ga` to your tracking id and `domain` to match the domain you use for Google Analytics.
+
 
 ### Switching themes
 
