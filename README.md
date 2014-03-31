@@ -57,4 +57,4 @@ Currently there are two templates to choose from:
 Feel free to add more templates by creating a pull request or you could just ask me politely :wink:
 
 ## License
-[MIT License](LICENSE-MIT)
+[MIT License](LICENSE)
