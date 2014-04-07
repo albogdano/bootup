@@ -1,9 +1,9 @@
 // Activates the Carousel
-$('.carousel').carousel({
+$(".carousel").carousel({
   interval: 5000
 })
 
 // Activates Tooltips for Social Links
-$('.tooltip-social').tooltip({
+$(".tooltip-social").tooltip({
   selector: "a[data-toggle=tooltip]"
 })

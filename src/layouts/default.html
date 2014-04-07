@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html lang="en-us" class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
@@ -11,7 +11,6 @@
 		<meta name="description" content="{{description}}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		
 		{{#is site.theme "default"}}
 			<!-- Bootstrap Vanilla CSS -->
 			<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +18,7 @@
 			<!-- Bootswatch Theme CSS -->
 			<link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/{{site.theme}}/bootstrap.min.css" rel="stylesheet">
 		{{/is}}
-		
+
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link href="css/main.css" rel="stylesheet">
@@ -28,16 +27,16 @@
 		<!--[if lt IE 7]>
 			<h1 class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</h1>
 		<![endif]-->
-		
+
 		<!--  Navigation  -->
 		{{>navbar}}
-		
+
 		<!-- Main Content -->
 		{{>body}}
 		
 		<!-- Footer Content -->
 		{{>footer}}
-		
+
 		<script src="//code.jquery.com/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script src="js/main.js"></script>
