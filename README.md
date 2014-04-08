@@ -27,6 +27,12 @@ Skip this part if you already have Node.js, Grunt and Bower on your machine.
 2. `$ npm install && bower install`
 3. `$ grunt server`
 
+**Other tasks:**
+
+- Build: `$ grunt`
+- Clean: `$ grunt clean`
+- Clean & Build: `$ grunt cb` (also validates HTML and Javascript)
+
 ## Settings
 
 ### Google Analytics
