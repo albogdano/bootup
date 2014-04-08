@@ -38,11 +38,21 @@ module.exports = function(grunt) {
 				flatten: true,
 				layouts: "<%= site.layouts %>",
 				layout: "<%= site.layout %>",
-				plugins: ["<%= site.plugins %>/*.js"],
-				helpers: ["<%= site.helpers %>/*.js"],
+				plugins: ["assemble-partial-data", "<%= site.plugins %>/*.js"],
+				helpers: ["handlebars-helper-mdpartial", "<%= site.helpers %>/*.js"],
 				partials: ["<%= site.partials %>/*.{html,md}", templateDir + "/partials/*.{html,md}"],
 				template: "<%= site.template %>",
 				templateDir: templateDir,
+				marked: {
+					breaks: true,
+					gfm: true,
+					highlight: function (code) {
+						return require("highlight.js").highlightAuto(code).value;
+					},
+					pedantic: true,
+					sanitize: false,
+					silent: false
+				},
 				// Metadata
 				pkg: "<%= pkg %>",
 				site: "<%= site %>"

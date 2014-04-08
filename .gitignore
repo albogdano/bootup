@@ -24,3 +24,4 @@ _gh-pages
 dist
 *.sublime-*
 nbproject
+validation-status.json

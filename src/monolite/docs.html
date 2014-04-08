@@ -1,0 +1,50 @@
+---
+title: Grayscale - Docs
+---
+<section id="docs" class="download-section">
+	<div class="container">
+		<div class="col-lg-3 hidden-md hidden-sm hidden-xs">
+			<nav id="sidebar">
+				{{>sidenav}}
+			</nav>
+		</div>
+		<div class="col-lg-9">
+			<section id="content">
+				{{#eachPartial "**/*.md"}}
+					{{#mdpartial partialName}}
+					<a id="{{partialName}}" href="#" class="doc-anchor"><i class="fa fa-link fa-lg"></i></a>
+					<article class="{{type}} img-rounded">
+						<a href="#">
+							<h2 class="img-rounded">
+								{{#if type}}
+									<code>
+										{{#is type "GET"}}
+											<span class="img-rounded label-success">{{type}}</span>
+										{{/is}}
+										{{#is type "PUT"}}
+											<span class="img-rounded label-warning">{{type}}</span>
+										{{/is}}
+										{{#is type "POST"}}
+											<span class="img-rounded label-info">{{type}}</span>
+										{{/is}}
+										{{#is type "DELETE"}}
+											<span class="img-rounded label-danger">{{type}}</span>
+										{{/is}}
+										<span class="gray">{{path}}</span>
+									</code>
+								{{else}}
+									&nbsp;
+								{{/if}}
+								<span class="hidden-xs">{{title}}</span>
+							</h2>
+						</a>
+						<section class="body img-rounded">
+							{{this.content}}
+						</section>
+					</article>
+					{{/mdpartial}}
+				{{/eachPartial}}
+			</section>
+		</div>
+	</div>
+</section>

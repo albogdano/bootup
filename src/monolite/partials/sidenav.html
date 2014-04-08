@@ -1,0 +1,27 @@
+<h1>Docs</h1>
+
+<form id="filter-form" role="form" action="#">
+	<input type="text" placeholder="Filter by keyword" class="form-control">
+</form>
+
+<ul id="links">
+	{{#eachPartial "**/*.md"}}
+		{{#if category}}
+		{{else}}
+			<li><a href="#{{partialName}}">{{title}}</a></li>
+		{{/if}}
+	{{/eachPartial}}
+
+	{{#each partialData.category}}
+		<li>
+			<h4>{{this.value}}</h4>
+			<ul>
+				{{#each partials}}
+					{{#mdpartial this}}
+						<li class="{{type}}"><a href="#{{partialName}}">{{title}}</a></li>
+					{{/mdpartial}}
+				{{/each}}
+			</ul>
+		</li>
+	{{/each}}
+</ul>

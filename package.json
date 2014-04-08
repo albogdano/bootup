@@ -1,7 +1,7 @@
 {
   "name": "bootup",
   "description": "Website template with integrated Bootstrap, Assemble, HTML5 boilerplate and Bootswatch themes.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/albogdano/bootup",
   "author": {
     "name": "Alex Bogdanovski",
@@ -40,7 +40,8 @@
     "marked": "^0.3.2",
     "minimatch": "^0.2.14",
     "handlebars-helper-mdpartial": "*",
-    "assemble-partial-data": "*"
+    "assemble-partial-data": "*",
+    "highlight.js": "^8.0.0"
   },
   "keywords": [
     "assemble",
@@ -51,8 +52,6 @@
     "bootstrap",
     "bootstrap boilerplate",
     "bootup",
-    "bootswatch",
-    "handlebars-helper-mdpartial",
-		"assemble-partial-data"
+    "bootswatch"
   ]
 }
