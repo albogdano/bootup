@@ -47,12 +47,13 @@ Use `default` for the vanilla Bootstrap style.
 
 Edit `assemble.json` and change `template` to one of the following:
 
-`modern-business`, `grayscale`
+`modern-business`, `grayscale`, `monolite`
 
-Currently there are two templates to choose from:
+Currently there are three templates to choose from:
 
 - [Modern Business](http://startbootstrap.com/modern-business) - a full site Bootstrap template
 - [Grayscale](http://startbootstrap.com/grayscale) - a nice black & white single page template
+- Monolite - a Grayscale clone but lighter. Great as a template for documentation!
 
 Feel free to add more templates by creating a pull request or you could just ask me politely :wink:
 
