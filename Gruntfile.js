@@ -31,7 +31,6 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON("package.json"),
 		site: grunt.file.readJSON("assemble.json"),
 		vendor: grunt.file.readJSON(".bowerrc").directory,
-		h5bp: "<%= vendor %>/h5bp",
 		// Build HTML from templates and data
 		assemble: {
 			options: {
@@ -59,9 +58,6 @@ module.exports = function(grunt) {
 			},
 			htmls: {
 				files: {"<%= site.dest %>/": [templateDir + "/*.html"]}
-//				data: {},
-//				partials: [],
-//				pages: { page: { }}
 			},
 			phps: ("<%= assemble.options.template %>" === "modern-business") ? {
 				options: {ext: ".php"},
@@ -98,24 +94,18 @@ module.exports = function(grunt) {
 		// concat and minify scripts
 		uglify: {
 		},
-		// Copy H5BP files to new project, using replacement
-		// patterns to convert files into templates.
+		// copy files task
 		copy: {
 			content: {
 				files: [
-//					{flatten: true, expand: true, cwd: "<%= vendor %>/h5bp/", src: ["doc/**"], dest: "tmp/content/"}
 					cssCopy, jsCopy,
 					{flatten: true, expand: true, cwd: templateDir + "/img/", src: ["*.*"], dest: "<%= site.dest %>/img/"},
 					{flatten: true, expand: true, cwd: templateDir + "/", src: ["*.html", "*.php"], dest: "<%= site.dest %>/"}
 				]
 			},
-			essentials: {
+			misc: {
 				files: [
-//					{expand: true, cwd: "<%= vendor %>/h5bp/", src: ["**/*", "!**/index.html", "!**/docs"], dest: "<%= site.dest %>/"}
-					{expand: true, cwd: "<%= h5bp %>", src: ["humans.txt"], dest: "<%= site.dest %>"},
-					{expand: true, cwd: "<%= h5bp %>", src: ["robots.txt"], dest: "<%= site.dest %>"},
-					{expand: true, cwd: "<%= h5bp %>", src: ["favicon.ico"], dest: "<%= site.dest %>"},
-					{expand: true, cwd: "<%= h5bp %>", src: ["apple-touch*"], dest: "<%= site.dest %>"}
+					{expand: true, cwd: "<%= site.templates %>/misc", src: ["*.*"], dest: "<%= site.dest %>"},
 				]
 			},
 			onlycss: { files: [cssCopy] },
@@ -184,7 +174,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-prettify");
 
 	// Default tasks to be run.
-	grunt.registerTask("default", ["test", "copy:content", "assemble", "copy:essentials", "prettify"]);
+	grunt.registerTask("default", ["test", "copy:content", "assemble", "copy:misc", "prettify"]);
 
 	// Linting and tests.
 	grunt.registerTask("test", ["clean"]);

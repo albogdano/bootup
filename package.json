@@ -1,7 +1,7 @@
 {
   "name": "bootup",
   "description": "Website template with integrated Bootstrap, Assemble, HTML5 boilerplate and Bootswatch themes.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/albogdano/bootup",
   "author": {
     "name": "Alex Bogdanovski",

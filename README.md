@@ -24,7 +24,7 @@ Skip this part if you already have Node.js, Grunt and Bower on your machine.
 ## Getting Started
 
 1. [Download](https://github.com/albogdano/bootup/archive/master.zip) bootUP **or** clone it.
-2. `$ npm install && bower install`
+2. `$ npm install`
 3. `$ grunt server`
 
 **Other tasks:**
