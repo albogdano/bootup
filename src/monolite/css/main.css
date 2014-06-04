@@ -2,7 +2,8 @@
 body {
 	width: 100%;
 	height: 100%;
-	font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1.7em;
 	color: #222222;
 	background-color: white;
 	margin-top: 60px;
@@ -14,39 +15,26 @@ html {
 	webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #222222;
-	margin: 0 0 35px;
-	text-transform: uppercase;
-	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-weight: 700;
-	letter-spacing: 1px;
+body ::selection {
+  background-color: #66CCFF;
+}
+body ::-moz-selection {
+  background-color: #66CCFF;
+}
+body ::-webkit-selection {
+  background-color: #66CCFF;
+}​
+
+img::selection {
+	background: 0 0;
 }
 
-p {
-	margin: 0 0 25px;
-	font-size: 18px;
-	line-height: 1.5;
-}
-
-@media(min-width:767px) {
-	p {
-		margin: 0 0 35px;
-		font-size: 20px;
-		line-height: 1.6;
-	}
+img::-moz-selection {
+	background: 0 0;
 }
 
 a {
 	color: #3399cc;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
 }
 
 a:hover,
@@ -63,12 +51,12 @@ a:focus {
 	margin-bottom: 1em;
 	border-bottom: 1px solid #444444;
 	text-transform: uppercase;
-	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	background-color: white;
 }
 
 .navbar-brand {
 	font-weight: 700;
+	padding: 10px 10px;
 }
 
 .navbar-brand:focus {
@@ -79,17 +67,12 @@ a:focus {
 	color: #222222;
 }
 
-.navbar-custom .nav li a {
-	-webkit-transition: background .3s ease-in-out;
-	-moz-transition: background .3s ease-in-out;
-	transition: background .3s ease-in-out;
-}
-
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li.active {
 	outline: 0;
-	background-color: rgba(0,0,0,.2);
+	color: white;
+	background-color: #66CCFF;
 }
 
 .navbar-toggle {
@@ -164,26 +147,8 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
 	outline: 0;
-	color: #222222;
-	background: rgba(0,0,0,.1);
-}
-
-.page-scroll .btn-circle i.animated {
-	-webkit-transition-property: -webkit-transform;
-	-webkit-transition-duration: 1s;
-	-moz-transition-property: -moz-transform;
-	-moz-transition-duration: 1s;
-}
-
-.page-scroll .btn-circle:hover i.animated {
-	-webkit-animation-name: pulse;
-	-moz-animation-name: pulse;
-	-webkit-animation-duration: 1.5s;
-	-moz-animation-duration: 1.5s;
-	-webkit-animation-iteration-count: infinite;
-	-moz-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
-	-moz-animation-timing-function: linear;
+	color: white;
+	background-color: #66CCFF;
 }
 
 .top-section {
@@ -222,9 +187,6 @@ a:focus {
 	text-transform: uppercase;
 	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 400;
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
 }
 
 .btn-default {
@@ -268,25 +230,6 @@ a:focus {
 	}
 }
 
-::-moz-selection {
-	text-shadow: none;
-	background: #fcfcfc;
-	background: rgba(0,0,0,.2);
-}
-
-::selection {
-	text-shadow: none;
-	background: #fcfcfc;
-	background: rgba(0,0,0,.2);
-}
-
-img::selection {
-	background: 0 0;
-}
-
-img::-moz-selection {
-	background: 0 0;
-}
 
 /*********** DOCS *************/
 
@@ -298,8 +241,12 @@ a.doc-anchor {
 }
 
 code {
-  font-family: 'Monaco', monospace, sans-serif;
-  background-color: transparent;
+	background-color: #ecf0f1;
+	color: black;
+}
+
+#content pre {
+	color: black;
 }
 
 #filter-form {
@@ -307,13 +254,12 @@ code {
 }
 
 #sidebar {
-	padding-top: 10px;
+	padding: 10px 1em 200px 0;
 	position: fixed;
 	overflow: auto;
 	height: 100%;
-	font-size: 1.3em;
+	font-size: 1em;
 	width: 260px;
-	padding-right: 1em;
 }
 
 #sidebar ul {
@@ -327,28 +273,41 @@ code {
 }
 
 #sidebar ul li {
-  padding: 0 0 15px;
+  padding: 0 0 5px;
 }
 
-#content article {
-  clear: both;
-  margin: 15px 0;
+#sidebar h4 {
+	margin: 5px 0 10px 0;
 }
 
-#content article h2 {
-  background: #333;
+#content article a h2 {
+  background: #333333;
   padding: 15px 10px;
 }
 
 #content a h2 {
-  color: #fff;
+  color: white;
   font-size: 1.3em;
   font-weight: normal;
   margin: 0;
 }
 
+#content h2 code {
+	background-color: transparent;
+}
+
+@media(max-width:767px) {
+	#content h2 code {
+		font-size: 0.5em;
+		/*line-height: 0.5em;*/
+	}
+	#content article a h2 {
+		padding: 0 0 10px 0;
+	}
+}
+
 #content a h2 code span {
-  color: #fff;
+  color: white;
   padding: 3px 6px;
 }
 
@@ -357,10 +316,117 @@ code {
 }
 
 #content .body {
-  padding: 15px;
+  padding: 15px 0;
 }
 
-#content .body code {
-  background: #eef1f2;
-  padding: 2px;
+/***** Syntax Highlighting Theme *****/
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  background: #3f3f3f;
+  color: #dcdcdc;
+}
+
+.hljs-keyword,
+.hljs-tag,
+.css .hljs-class,
+.css .hljs-id,
+.lisp .hljs-title,
+.nginx .hljs-title,
+.hljs-request,
+.hljs-status,
+.clojure .hljs-attribute {
+  color: #0066cc;
+}
+
+.django .hljs-template_tag,
+.django .hljs-variable,
+.django .hljs-filter .hljs-argument {
+  color: #666666;
+}
+
+.hljs-number,
+.hljs-date {
+  color: #3399ff;
+}
+
+.dos .hljs-envvar,
+.dos .hljs-stream,
+.hljs-variable,
+.apache .hljs-sqbracket {
+  color: #444444;
+}
+
+.dos .hljs-flow,
+.diff .hljs-change,
+.python .exception,
+.python .hljs-built_in,
+.hljs-literal,
+.tex .hljs-special {
+  color: #cc0000;
+}
+
+.diff .hljs-chunk,
+.hljs-subst {
+  color: #8f8f8f;
+}
+
+.dos .hljs-keyword,
+.python .hljs-decorator,
+.hljs-title,
+.haskell .hljs-type,
+.diff .hljs-header,
+.ruby .hljs-class .hljs-parent,
+.apache .hljs-tag,
+.nginx .hljs-built_in,
+.tex .hljs-command,
+.hljs-prompt {
+  color: #cc0000;
+}
+
+.dos .hljs-winutils,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-string,
+.hljs-string {
+  color: #cc0000;
+}
+
+.diff .hljs-deletion,
+.hljs-tag .hljs-value,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-javadoc,
+.smalltalk .hljs-class,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.css .hljs-rules .hljs-value,
+.hljs-attr_selector,
+.hljs-pseudo,
+.apache .hljs-cbracket,
+.tex .hljs-formula,
+.coffeescript .hljs-attribute {
+  color: #990000;
+}
+
+.hljs-shebang,
+.diff .hljs-addition,
+.hljs-comment,
+.java .hljs-annotation,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype {
+  color: #8f8f8f;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
 }

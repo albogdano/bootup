@@ -14,9 +14,9 @@ title: Grayscale - Docs
 					{{#mdpartial partialName}}
 					<a id="{{partialName}}" href="#" class="doc-anchor"><i class="fa fa-link fa-lg"></i></a>
 					<article class="{{type}} img-rounded">
+						{{#if type}}
 						<a href="#">
 							<h2 class="img-rounded">
-								{{#if type}}
 									<code>
 										{{#is type "GET"}}
 											<span class="img-rounded label-success">{{type}}</span>
@@ -32,12 +32,12 @@ title: Grayscale - Docs
 										{{/is}}
 										<span class="gray">{{path}}</span>
 									</code>
-								{{else}}
-									&nbsp;
-								{{/if}}
 								<span class="hidden-xs">{{title}}</span>
 							</h2>
 						</a>
+						{{else}}
+							<h2>{{title}}</h2>
+						{{/if}}
 						<section class="body img-rounded">
 							{{this.content}}
 						</section>
