@@ -25,7 +25,7 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "assemble": ">=0.4.42",
+    "assemble": "^0.4.42",
     "grunt": ">=0.4.5",
     "grunt-contrib-clean": ">=0.5.0",
     "grunt-contrib-connect": ">=0.7.1",
@@ -35,7 +35,6 @@
     "grunt-contrib-watch": ">=0.5.3",
     "grunt-prettify": ">=0.3.4",
     "grunt-html-validation": "^0.1.15",
-    "lodash": "^2.4.1",
     "gray-matter": "^0.3.4",
     "marked": "^0.3.2",
     "minimatch": "^0.2.14",
