@@ -33,6 +33,12 @@ Skip this part if you already have Node.js, Grunt and Bower on your machine.
 - Clean: `$ grunt clean`
 - Clean & Build: `$ grunt cb` (also validates HTML and Javascript)
 
+**Note:** if you get the error `ENOSPC` Error on Linux, do this:
+
+```bash
+$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
 ## Settings
 
 ### Google Analytics
