@@ -15,7 +15,7 @@ It contains some of the most widely used frontend tools and frameworks.
 
 ## Demo Site
 
-## [Para Docs](http://www.paraio.org/docs/)
+### [Para Docs](http://www.paraio.org/docs/)
 
 ## Requirements
 
