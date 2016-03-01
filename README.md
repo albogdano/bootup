@@ -13,6 +13,10 @@ It contains some of the most widely used frontend tools and frameworks.
 - [Bootswatch](http://bootswatch.com) - a collection of Bootstrap themes
 - [Font Awesome](http://fontawesome.io) - icon font
 
+## Demo Site
+
+## [Para Docs](http://www.paraio.org/docs/)
+
 ## Requirements
 
 Skip this part if you already have Node.js, Grunt and Bower on your machine.
