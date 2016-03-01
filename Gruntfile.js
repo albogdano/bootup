@@ -113,6 +113,9 @@ module.exports = function(grunt) {
 		},
 		// Before generating new files remove files from previous build.
 		clean: {
+			options: {
+				force: true
+			},
 			dest: ["<%= site.dest %>/**"]
 		},
 
