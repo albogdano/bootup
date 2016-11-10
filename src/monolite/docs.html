@@ -9,6 +9,7 @@ title: Grayscale - Docs
 			</nav>
 		</div>
 		<div class="col-lg-9">
+			<a href="#" class="radius collapse-expand-link">&blacktriangledown;&blacktriangle; collapse/expand all</a>
 			<section id="content">
 				{{#eachPartial "**/*.md"}}
 					{{#mdpartial partialName}}
@@ -38,7 +39,7 @@ title: Grayscale - Docs
 						{{else}}
 							<h2>{{title}}</h2>
 						{{/if}}
-						<section class="body img-rounded">
+						<section class="body {{#if type}}api-body{{/if}} img-rounded">
 							{{this.content}}
 						</section>
 					</article>

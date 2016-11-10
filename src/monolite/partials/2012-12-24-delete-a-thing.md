@@ -5,6 +5,8 @@ title: 'Delete a thing'
 type: 'DELETE'
 ---
 
+<a href="#" class="radius collapse-expand-link">&blacktriangledown;&blacktriangle; collapse/expand all</a>
+
 This method allows the user to post a new thing to his stuff.
 
 ### Request

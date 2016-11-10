@@ -3,7 +3,7 @@
 
 ## Features
 
-With **bootUP** you can quickly build responsive static websites and iterate on them _without refreshing the browser_! 
+With **bootUP** you can quickly build responsive static websites and iterate on them _without refreshing the browser_!
 It contains some of the most widely used frontend tools and frameworks.
 
 - [Bootstrap](http://getbootstrap.com) - CSS and JS framework
@@ -15,14 +15,14 @@ It contains some of the most widely used frontend tools and frameworks.
 
 ## Demo Site
 
-### [Para Docs](http://www.paraio.org/docs/)
+### [Para Docs](https://paraio.org/docs/)
 
 ## Requirements
 
 Skip this part if you already have Node.js, Grunt and Bower on your machine.
 
 1. Get [Node.js](http://nodejs.org/)
-2. Install Grunt - `$ npm install -g grunt-cli` 
+2. Install Grunt - `$ npm install -g grunt-cli`
 3. Install Bower - `$ npm install -g bower`
 
 ## Getting Started
