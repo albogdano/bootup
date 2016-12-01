@@ -30,7 +30,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
 		site: grunt.file.readJSON("assemble.json"),
-		vendor: grunt.file.readJSON(".bowerrc").directory,
 		// Build HTML from templates and data
 		assemble: {
 			options: {
@@ -167,13 +166,12 @@ module.exports = function(grunt) {
 	});
 
 	// Load npm plugins to provide necessary tasks.
-	grunt.loadNpmTasks("assemble");
+	grunt.loadNpmTasks("grunt-assemble");
 	grunt.loadNpmTasks("grunt-contrib-clean");
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-contrib-connect");
-	grunt.loadNpmTasks("grunt-html-validation");
 	grunt.loadNpmTasks("grunt-prettify");
 
 	// Default tasks to be run.
@@ -181,7 +179,7 @@ module.exports = function(grunt) {
 
 	// Linting and tests.
 	grunt.registerTask("test", ["clean"]);
-	grunt.registerTask("validate", ["jshint", "validation"]);	// html && js validation
-	grunt.registerTask("cb", ["default", "validate"]);	// clean & build
+	grunt.registerTask("validate", ["jshint"]);	// html && js validation
+	grunt.registerTask("cb", ["clean", "default"]);	// clean & build
 	grunt.registerTask("server", ["default", "connect:livereload", "watch"]); // watch & live reload
 };
