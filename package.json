@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "assemble-partial-data": "0.3.0",
+    "brace-expansion": "^1.1.11",
     "expander": "0.3.3",
     "gray-matter": "4.0.1",
     "grunt": "^1.0.3",
@@ -37,7 +38,8 @@
     "highlight.js": "9.13.1",
     "lodash": "^4.17.11",
     "marked": "0.5.2",
-    "minimatch": "3.0.4"
+    "minimatch": "^3.0.4",
+    "moment": "^2.22.2"
   },
   "keywords": [
     "assemble",
