@@ -1,7 +1,7 @@
 {
   "name": "bootup",
   "description": "Website template with integrated Bootstrap, Assemble, HTML5 boilerplate and Bootswatch themes.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "homepage": "https://github.com/albogdano/bootup",
   "license": "MIT",
   "author": {
@@ -20,26 +20,26 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "assemble-partial-data": "0.3.0",
+    "assemble-partial-data": "0.4.0",
     "brace-expansion": "^1.1.11",
     "expander": "0.3.3",
-    "gray-matter": "4.0.1",
-    "grunt": "^1.0.3",
+    "gray-matter": "4.0.2",
+    "grunt": "^1.0.4",
     "grunt-assemble": "0.6.3",
     "grunt-contrib-clean": "2.0.0",
     "grunt-contrib-connect": "2.0.0",
     "grunt-contrib-copy": "1.0.0",
-    "grunt-contrib-jshint": "2.0.0",
-    "grunt-contrib-uglify": "4.0.0",
+    "grunt-contrib-jshint": "2.1.0",
+    "grunt-contrib-uglify": "4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-prettify": "0.4.0",
-    "handlebars-helper-mdpartial": "0.5.0",
+    "handlebars-helper-mdpartial": "0.6.0",
     "handlebars-helper-moment": "^0.2.0",
-    "highlight.js": "9.13.1",
+    "highlight.js": "9.15.8",
     "lodash": "^4.17.11",
-    "marked": "0.5.2",
+    "marked": "0.6.2",
     "minimatch": "^3.0.4",
-    "moment": "^2.22.2"
+    "moment": "^2.24.0"
   },
   "keywords": [
     "assemble",
